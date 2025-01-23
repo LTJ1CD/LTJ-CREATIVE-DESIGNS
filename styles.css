@@ -464,27 +464,30 @@ footer {
         font-size: 0.9rem;
     }
 }
-.contact-email-container {
+.email-container {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Adjust based on your site layout */
-    margin: 20px auto;
+    border-radius: 5px;
+    background: #f9f9f9;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.contact-email-container img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+
+.email-container img {
+    width: 20px; /* Smaller size */
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px; /* Space between icon and text */
 }
-.contact-email-container a {
+
+.email-container a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
+    color: #6fa8dc; /* Light blue color */
+    font-size: 14px; /* Moderate font size */
+    font-weight: normal;
 }
-.contact-email-container a:hover {
-    color: #4285f4;
+
+.email-container a:hover {
+    color: #4285f4; /* Slightly darker blue on hover */
 }

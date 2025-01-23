@@ -99,18 +99,53 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <form action="submit-form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+        <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .email-container img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .email-container a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .email-container a:hover {
+            color: #4285f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Icon">
+        <p>Contact me via email:</p>
+        <a href="mailto:ltjcreativedesigns@gmail.com">ltjcreativedesigns@gmail.com</a>
+    </div>
+</body>
+</html>
 
         <div class="social-media">
             <a href="https://www.facebook.com/profile.php?id=61569495383214&mibextid=ZbWKwL

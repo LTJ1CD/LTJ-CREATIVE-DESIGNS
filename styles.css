@@ -1,109 +1,181 @@
-/* Import Poppins Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-/* Root Variables for LTJ Brand */
-:root {
-  --ltj-blue: #0D47A1;
-  --ltj-cyan: #00BCD4;
-  --ltj-white: #F9F9F9;
-  --ltj-black: #000000;
-  --font-heading: 'Poppins', sans-serif;
-}
-
 /* Reset & Base Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: var(--font-heading);
-  background-color: var(--ltj-white);
-  color: var(--ltj-black);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
+    background-color: #E6EFF8; /* Soft Background Blue */
+    color: #0D1A2D; /* Primary Dark Text */
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 /* Header */
 header {
-  background-color: var(--ltj-blue);
-  color: var(--ltj-white);
-  padding: 1.5rem 2rem;
-  text-align: center;
+    background: #0D1A2D;
+    color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header .logo {
+    width: 100px;
+    margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: var(--ltj-cyan);
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: #00BCD4; /* Cyan Accent */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0097A7;
+}
+
+/* Navigation */
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #0D1A2D;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00BCD4;
 }
 
 /* Section Titles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
 section h2 {
-  color: var(--ltj-blue);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+    font-size: 2rem;
+    color: #0D1A2D;
+    margin-bottom: 20px;
 }
 
-/* Responsive Images and Videos */
-img, video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* About */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #333;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  background-color: var(--ltj-cyan);
-  color: var(--ltj-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s ease;
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.btn:hover {
-  background-color: var(--ltj-blue);
+.service-card {
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #0D1A2D;
+    margin-bottom: 15px;
+}
+
+.service-card .learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00BCD4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact */
+#contact a {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #0D1A2D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.email-container img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 8px;
 }
 
 /* Footer */
 footer {
-  background-color: var(--ltj-black);
-  color: var(--ltj-white);
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1.2rem;
-  }
+    background-color: #0D1A2D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
 }

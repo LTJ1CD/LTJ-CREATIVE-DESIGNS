@@ -1,13 +1,14 @@
-/* === Brand Colors === */
+/* === Brand Color Variables === */
 :root {
-  --royal-blue: #0D47A1;
+  --bluish-white: #F0F8FF;
+  --dark-blue: #0D47A1;
+  --light-grey: #F2F2F2;
   --bright-cyan: #00BCD4;
-  --soft-white: #F9F9F9;
-  --black: #000000;
   --text-dark: #1a1a1a;
+  --soft-white: #ffffff;
 }
 
-/* === Base Reset === */
+/* === Reset and Base === */
 * {
   margin: 0;
   padding: 0;
@@ -16,53 +17,15 @@
 }
 
 body {
-  background-color: var(--soft-white);
+  background-color: var(--bluish-white);
   color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* === Header Section === */
-header {
-  background: linear-gradient(to right, var(--royal-blue), var(--bright-cyan));
-  color: var(--soft-white);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.logo {
-  max-width: 100px;
-  margin-bottom: 15px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background-color: var(--soft-white);
-  color: var(--royal-blue);
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: var(--bright-cyan);
-  color: var(--black);
-}
-
 /* === Navigation Bar === */
 nav {
-  background-color: var(--black);
-  padding: 10px 0;
+  background-color: var(--dark-blue);
+  padding: 15px 0;
   text-align: center;
 }
 
@@ -72,11 +35,11 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav a {
-  color: var(--soft-white);
+  color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -86,6 +49,45 @@ nav a:hover {
   color: var(--bright-cyan);
 }
 
+/* === Header/Hero Section === */
+header {
+  background-color: var(--light-grey);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: var(--dark-blue);
+  color: var(--soft-white);
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #093672;
+}
+
 /* === Section Styling === */
 section {
   padding: 60px 20px;
@@ -93,7 +95,7 @@ section {
 }
 
 h2 {
-  color: var(--royal-blue);
+  color: var(--dark-blue);
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -101,36 +103,46 @@ h2 {
 .services-grid,
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
+/* === Cards === */
 .service-card,
 .portfolio-item {
   background-color: var(--soft-white);
   padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover,
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .service-card h3,
 .portfolio-item h3 {
-  color: var(--royal-blue);
+  color: var(--dark-blue);
   margin-bottom: 10px;
 }
 
 .learn-more {
-  display: inline-block;
-  margin-top: 10px;
   color: var(--bright-cyan);
+  font-weight: 500;
   text-decoration: underline;
 }
 
-.video-container video {
+/* === Media Styling === */
+img,
+video {
   width: 100%;
-  border-radius: 5px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 15px;
 }
 
 /* === Contact Section === */
@@ -145,7 +157,7 @@ h2 {
 }
 
 .email-container a {
-  color: var(--royal-blue);
+  color: var(--dark-blue);
   font-weight: 600;
   text-decoration: none;
 }
@@ -153,7 +165,7 @@ h2 {
 .social-media a {
   margin: 0 10px;
   text-decoration: none;
-  color: var(--black);
+  color: var(--dark-blue);
   font-weight: 500;
 }
 
@@ -163,7 +175,7 @@ h2 {
 
 /* === Footer === */
 footer {
-  background-color: var(--royal-blue);
+  background-color: var(--dark-blue);
   color: var(--soft-white);
   text-align: center;
   padding: 15px 0;

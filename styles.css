@@ -46,11 +46,4 @@ button:hover {
   top: 20px;
   left: 20px;
   height: 60px;
-}body::before {
-  content: "CSS IS WORKING";
-  display: block;
-  color: red;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
 }

@@ -1,49 +1,156 @@
-:root {
-  --background-color: #DDE6F0; /* Bluish white from logo background */
-  --button-color: #0D1B2A;     /* Dark blue from logo text and border */
-  --heading-bg: #F0F0F0;       /* Light grey for heading background */
-  --text-color: #0D1B2A;       /* Same dark blue for consistency */
-  --hover-color: #1B263B;      /* Deeper blue for hover effect */
-}
-
-/* General Page Styling */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
+/* Base Reset and Fonts */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Heading Styling */
-h1, h2, h3 {
-  background-color: var(--heading-bg);
-  color: var(--text-color);
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
+body {
+  background-color: #DCE3EC;
+  color: #1F2733;
+  line-height: 1.6;
 }
 
-/* Button Styling */
-button {
-  background-color: var(--button-color);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
+/* Header and Hero */
+header {
+  background-color: #1F2733;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #C1C3C6;
+}
+
+.cta-button {
+  background-color: #C1C3C6;
+  color: #1F2733;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: var(--hover-color);
+.cta-button:hover {
+  background-color: #FFFFFF;
 }
 
-/* Optional: Logo Alignment Top Left */
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  height: 60px;
+/* Navigation */
+nav {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #1F2733;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #C1C3C6;
+}
+
+/* Section Styling */
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1F2733;
+}
+
+/* Services Grid */
+.services-grid, .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card, .portfolio-item {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1F2733;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Video/Images */
+.video-container video,
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Contact Section */
+.email-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1F2733;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.email-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-media a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #1F2733;
+}
+
+.social-media a:hover {
+  color: #C1C3C6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1F2733;
+  color: #FFFFFF;
 }

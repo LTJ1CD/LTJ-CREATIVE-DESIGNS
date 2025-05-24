@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #e0f7fa, #d0f0ff, #e3f2fd, #bbdefb);
-  background-size: 400% 400%;
-  animation: gradientMotion 15s ease infinite;
+  background: linear-gradient(-45deg, #c9d9e9, #d5e3f1, #c9d9e9, #d0e0f0);
+  background-size: 300% 300%;
+  animation: bgFlow 20s ease infinite;
   color: #000;
   line-height: 1.6;
 }
 
-/* Gradient Motion Animation */
-@keyframes gradientMotion {
+/* Soft animated gradient */
+@keyframes bgFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -46,22 +46,22 @@ nav a {
 }
 
 nav a:hover {
-  color: #00ACC1;
+  color: #0077b6;
 }
 
-/* Hero Image (Header Image Area) */
+/* Hero Image */
 .hero {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-/* Sections */
+/* Section Styling */
 section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
   text-align: center;
+  animation: fadeUp 1s ease-in;
 }
 
 h2 {
@@ -73,6 +73,18 @@ h2 {
 p {
   font-size: 1.1rem;
   color: #333;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Services Grid */
@@ -88,11 +100,12 @@ p {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .service-card h3 {
@@ -108,7 +121,7 @@ p {
   font-weight: bold;
 }
 
-/* Portfolio */
+/* Portfolio Section */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -121,6 +134,11 @@ p {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .portfolio-item img,

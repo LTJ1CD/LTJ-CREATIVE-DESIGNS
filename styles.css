@@ -16,7 +16,6 @@ body {
 :root {
   --deep-blue: #1b2a41;
   --light-blue: #d5e3f3;
-  --highlight: #25D366;
 }
 
 /* Hero Section */
@@ -36,7 +35,7 @@ body {
 .cta-button {
   margin-top: 20px;
   display: inline-block;
-  background-color: var(--highlight);
+  background-color: var(--deep-blue); /* Updated */
   color: white;
   padding: 14px 30px;
   font-weight: bold;
@@ -47,7 +46,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #1ebe5d;
+  background-color: #0e1930; /* Slightly darker deep-blue */
   transform: translateY(-3px);
 }
 
@@ -75,7 +74,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--highlight);
+  color: #d5e3f3; /* Light blue hover */
 }
 
 /* Sections */
@@ -161,7 +160,7 @@ section h2 {
 }
 
 .social-media a:hover {
-  color: var(--highlight);
+  color: #d5e3f3; /* Light blue */
 }
 
 /* WhatsApp Button */

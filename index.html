@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,33 +7,209 @@
   <meta name="author" content="LTJ Creative Designs" />
   <title>LTJ Creative Designs</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }body {
+  background-color: #d5e3f3;
+  color: #1b1f3a;
+  line-height: 1.6;
+}
+
+:root {
+  --deep-blue: #1b2a41;
+  --light-blue: #d5e3f3;
+}
+
+.hero {
+  background-color: var(--deep-blue);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: var(--deep-blue);
+  color: white;
+  padding: 14px 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+  background-color: #0e1930;
+  transform: translateY(-3px);
+}
+
+nav {
+  background-color: var(--deep-blue);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d5e3f3;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--deep-blue);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--deep-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.portfolio-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video,
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#contact {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+.email-container,
+.social-media {
+  margin-top: 20px;
+}
+
+.email-container img {
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.email-container a,
+.social-media a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.social-media a:hover {
+  color: #d5e3f3;
+}
+
+.whatsapp-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.whatsapp-button {
+  background-color: var(--deep-blue);
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button:hover {
+  background-color: #0e1930;
+  transform: translateY(-3px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+  </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
   <header class="hero">
     <img src="ltj-hero.png" alt="LTJ Creative Designs Banner" class="hero-image" />
     <a href="#services" class="cta-button">Work With Us</a>
-  </header>
-
-  <!-- Navigation -->
-  <nav>
+  </header>  <nav>
     <ul>
       <li><a href="#about">About Us</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about">
+  </nav>  <section id="about">
     <h2>About Us</h2>
     <p>We are a forward-thinking creative agency helping brands scale with impactful motion graphics, compelling design, and visual storytelling. We blend creativity with strategy to deliver results that drive growth.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
+  </section>  <section id="services">
     <h2>Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -58,10 +233,7 @@
         <a href="website-design.html" class="learn-more">Explore Web</a>
       </div>
     </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
+  </section>  <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
@@ -71,13 +243,11 @@
         <h3>Animated Logo</h3>
         <p>A dynamic logo motion to elevate brand identity.</p>
       </div>
-
       <div class="portfolio-item">
         <img src="demo-graphic.jpg" alt="Social Media Design" />
         <h3>Social Campaign</h3>
         <p>Creative assets for impactful social engagement.</p>
       </div>
-
       <div class="portfolio-item">
         <div class="video-container">
           <video src="demo-e.mp4" controls></video>
@@ -85,23 +255,19 @@
         <h3>Event Video</h3>
         <p>Professional editing for a vibrant promotional recap.</p>
       </div>
-
       <div class="portfolio-item">
         <img src="demo-website.jpg" alt="Website Design" />
         <h3>Web Demo</h3>
         <p>Responsive and clean layout for a mock e-commerce site.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Get in Touch</h2>
-<div class="whatsapp-button-container">
-  <a href="https://wa.me/2348079427311" target="_blank" class="whatsapp-button">
-    Chat on WhatsApp
-  </a>
-</div>
+    <div class="whatsapp-button-container">
+      <a href="https://wa.me/2348079427311" target="_blank" class="whatsapp-button">
+        Chat on WhatsApp
+      </a>
+    </div>
     <div class="email-container">
       <a href="mailto:ltjcreativedesigns@gmail.com">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Icon" />
@@ -114,16 +280,9 @@
       <a href="https://www.instagram.com/ltjcreativedesigns/" target="_blank">Instagram</a>
       <a href="https://www.linkedin.com/in/timi-joshua-400001343" target="_blank">LinkedIn</a>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
+  </section>  <footer>
     &copy; <span id="year"></span> LTJ Creative Designs. All rights reserved.
-  </footer>
-
-  <script>
-    // Auto update year
+  </footer>  <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+  </script></body>
 </html>

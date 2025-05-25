@@ -1,63 +1,238 @@
-/* Base Colors from Logo / :root { --brand-deep-blue: #1c2533; / dark navy tone / --brand-light-blue: #dce7f2; / background soft blue */ --text-dark: #1a1a1a; --white: #ffffff; }
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Global Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F1F5F9;
+  color: #0F172A;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
+/* Animated World Map Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background-image: url("world-map.png"); /* Add your map image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -1;
+  animation: moveMap 60s linear infinite;
+}
 
+@keyframes moveMap {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-10%, -10%); }
+}
 
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--brand-light-blue); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; position: relative; }
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cbd5e1;
+}
 
-/* Background World Map Motion */ body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('worldmap.png') center/cover no-repeat; opacity: 0.05; z-index: -1; animation: moveMap 60s infinite linear; }
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+}
 
-@keyframes moveMap { 0% { transform: scale(1.05) translate(0, 0); } 50% { transform: scale(1.1) translate(-10px, -5px); } 100% { transform: scale(1.05) translate(0, 0); } }
+.cta-button {
+  position: absolute;
+  bottom: 60px;
+  padding: 14px 28px;
+  background-color: #0F172A;
+  color: white;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
-/* Hero Section */ .hero { text-align: center; padding: 60px 20px; background: var(--brand-light-blue); animation: fadeIn 2s ease; }
+.cta-button:hover {
+  background-color: #1E293B;
+  transform: translateY(-4px);
+}
 
-.hero-image { max-width: 250px; margin-bottom: 20px; animation: fadeIn 2.5s ease; }
+/* Navigation */
+nav {
+  background-color: #0F172A;
+  padding: 12px 20px;
+  text-align: center;
+}
 
-.cta-button { background-color: var(--brand-deep-blue); color: var(--white); padding: 12px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-.cta-button:hover { background-color: #141a25; transform: translateY(-3px); }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
 
-/* Navigation */ nav { background-color: var(--brand-deep-blue); padding: 10px 0; }
+nav a:hover {
+  color: #60A5FA;
+}
 
-nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-nav a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1E293B;
+}
 
-nav a:hover { color: #b0c4d6; }
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
 
-section { padding: 60px 20px; text-align: center; animation: fadeIn 1s ease-in; }
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
 
-h2 { color: var(--brand-deep-blue); font-size: 2rem; margin-bottom: 20px; }
+.service-card:hover {
+  transform: translateY(-5px);
+}
 
-/* Services */ .services-grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 30px; }
+.service-card h3 {
+  color: #0F172A;
+  margin-bottom: 10px;
+}
 
-.service-card { background-color: #f9fbfd; border: 1px solid #d5e0ec; border-radius: 16px; padding: 20px; transition: transform 0.3s, box-shadow 0.3s; }
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-.service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.learn-more:hover {
+  text-decoration: underline;
+}
 
-.learn-more { color: var(--brand-deep-blue); text-decoration: underline; display: inline-block; margin-top: 10px; }
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
 
-/* Portfolio */ .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+.portfolio-item {
+  background-color: white;
+  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-.portfolio-item img, .portfolio-item video { width: 100%; border-radius: 12px; }
+.video-container video,
+.portfolio-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
 
-.video-container { overflow: hidden; border-radius: 12px; }
+/* Contact Section */
+.email-container,
+.social-media {
+  text-align: center;
+  margin-top: 20px;
+}
 
-/* Contact */ .whatsapp-button-container { margin-top: 30px; text-align: center; }
+.email-container img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 
-.whatsapp-button { background-color: var(--brand-deep-blue); color: white; padding: 12px 24px; font-weight: 600; border-radius: 30px; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.3s ease; box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+.email-container a {
+  color: #0F172A;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-.whatsapp-button:hover { background-color: #141a25; transform: translateY(-3px); }
+.social-media a {
+  margin: 0 10px;
+  color: #0F172A;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-.email-container, .social-media { margin-top: 20px; }
+.social-media a:hover {
+  color: #2563EB;
+}
 
-.email-container a, .social-media a { display: inline-block; margin: 8px; color: var(--brand-deep-blue); font-weight: 500; text-decoration: none; }
+/* WhatsApp Button */
+.whatsapp-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
 
-.email-container img { width: 20px; vertical-align: middle; margin-right: 8px; }
+.whatsapp-button {
+  background-color: #0F172A;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
 
-/* Footer */ footer { background-color: var(--brand-deep-blue); color: var(--white); text-align: center; padding: 20px; }
+.whatsapp-button:hover {
+  background-color: #1E293B;
+  transform: translateY(-3px);
+}
 
-/* Animation */ @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-
+/* Footer */
+footer {
+  background-color: #0F172A;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}

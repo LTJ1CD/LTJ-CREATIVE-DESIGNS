@@ -1,206 +1,67 @@
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* ===== LTJ Creative Designs CSS ===== */
 
-body {
-  background-color: #D7E4F2; /* Soft blue */
-  color: #0C1F33; /* Deep navy text */
-  line-height: 1.6;
-}
+:root { --navy: #0C1F33; --gray: #8A8C8E; --accent-gray: #C5C7C9; --light-bg: #D7E4F2; --black: #000000; }
 
-/* Brand Variables */
-:root {
-  --navy: #0C1F33;
-  --gray: #8A8C8E;
-  --accent-gray: #C5C7C9;
-  --light-bg: #D7E4F2;
-  --black: #000000;
-}
+/* Reset */
 
-/* Hero */
-.hero {
-  background-color: var(--navy);
-  text-align: center;
-  padding: 50px 20px;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease;
-}
 
-.hero-image:hover {
-  transform: scale(1.02);
-}
+body { background-color: var(--light-bg); color: var(--navy); line-height: 1.6; }
 
-.cta-button {
-  margin-top: 20px;
-  background-color: var(--black);
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s, transform 0.3s;
-}
+/* Navigation */ nav { background-color: var(--navy); padding: 15px 10px; text-align: center; }
 
-.cta-button:hover {
-  background-color: var(--gray);
-  transform: translateY(-3px);
-}
+nav ul { list-style: none; }
 
-/* Navigation */
-nav {
-  background-color: var(--navy);
-  text-align: center;
-  padding: 15px 10px;
-}
+nav li { display: inline; margin: 0 18px; }
 
-nav ul {
-  list-style: none;
-}
+nav a { color: white; font-weight: 600; text-decoration: none; transition: color 0.3s ease; }
 
-nav li {
-  display: inline;
-  margin: 0 18px;
-}
+nav a:hover { color: var(--accent-gray); }
 
-nav a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+/* Hero Section */ .hero { background-color: var(--navy); text-align: center; padding: 50px 20px; }
 
-nav a:hover {
-  color: var(--accent-gray);
-}
+.hero-image { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease; }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
+.hero-image:hover { transform: scale(1.02); }
 
-section h2 {
-  color: var(--navy);
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
+.cta-button { margin-top: 20px; background-color: var(--black); color: #fff; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: background-color 0.3s, transform 0.3s; }
 
-/* Services */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
+.cta-button:hover { background-color: var(--gray); transform: translateY(-3px); }
 
-.service-card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
+/* Section */ section { padding: 60px 20px; text-align: center; }
 
-.service-card:hover {
-  transform: translateY(-5px);
-}
+section h2 { color: var(--navy); font-size: 2.2rem; margin-bottom: 20px; }
 
-.learn-more {
-  display: inline-block;
-  margin-top: 10px;
-  color: var(--navy);
-  text-decoration: underline;
-  font-weight: 600;
-}
+/* Services */ .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
 
-/* Portfolio */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+.service-card { background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease; }
 
-.portfolio-item {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
+.service-card:hover { transform: translateY(-5px); }
 
-.video-container video,
-.portfolio-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+.learn-more { display: inline-block; margin-top: 10px; color: var(--navy); text-decoration: underline; font-weight: 600; }
 
-/* Contact */
-#contact {
-  background-color: var(--navy);
-  color: white;
-  padding: 60px 20px;
-}
+/* Portfolio */ .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
-.email-container,
-.social-media {
-  margin-top: 20px;
-}
+.portfolio-item { background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); }
 
-.email-container img {
-  width: 22px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
+.video-container video, .portfolio-item img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
 
-.email-container a,
-.social-media a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-}
+/* Contact */ #contact { background-color: var(--navy); color: white; padding: 60px 20px; }
 
-.social-media a:hover {
-  color: var(--accent-gray);
-}
+.email-container, .social-media { margin-top: 20px; }
 
-/* WhatsApp Button */
-.whatsapp-button-container {
-  margin-top: 30px;
-  text-align: center;
-}
+.email-container img { width: 22px; margin-right: 10px; vertical-align: middle; }
 
-.whatsapp-button {
-  background-color: var(--navy);
-  color: white;
-  padding: 12px 26px;
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
+.email-container a, .social-media a { color: white; text-decoration: none; margin: 0 12px; font-weight: 500; }
 
-.whatsapp-button:hover {
-  background-color: #000000;
-  transform: translateY(-3px);
-}
+.social-media a:hover { color: var(--accent-gray); }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  background-color: var(--navy);
-  color: white;
-}
+/* WhatsApp Button */ .whatsapp-button-container { margin-top: 30px; text-align: center; }
+
+.whatsapp-button { background-color: var(--navy); color: white; padding: 12px 26px; font-weight: 600; border-radius: 30px; text-decoration: none; transition: background-color 0.3s, transform 0.3s; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }
+
+.whatsapp-button:hover { background-color: var(--black); transform: translateY(-3px); }
+
+/* Footer */ footer { text-align: center; padding: 20px; font-size: 0.9rem; background-color: var(--navy); color: white; }
+
